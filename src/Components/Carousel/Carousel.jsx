@@ -40,7 +40,8 @@ function Carousel({ existingCards }) {
         <div className={styles.images}>
           {displayedCards.map((card, index) => (
             <Flashcard
-              key={index}
+              key={currentIndex + index}
+              cardIndex={currentIndex + index + 1}
               question={card.question}
               answer={card.answer}
             />
