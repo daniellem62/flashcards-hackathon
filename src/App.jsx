@@ -1,4 +1,6 @@
 /* import { useState } from "react"; */
+
+import Footer from "./Components/Footer/footer.jsx";
 import Header from "./components/header/header.jsx";
 import Form from "./components/form/form.jsx";
 import "./index.css";
@@ -12,6 +14,7 @@ function App() {
       <Header />
       <Form />
       <Flashcards />
+      <Footer />
     </div>
   );
 }
