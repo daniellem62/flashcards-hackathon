@@ -1,4 +1,6 @@
 .card {
+  display: flex;
+  flex-direction: column;
   width: 300px;
   height: 200px;
   background-color: #04357e;
@@ -9,13 +11,24 @@
   transform-style: preserve-3d;
   transition: transform 0.5s;
   margin: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
   text-align: center;
-  font-size: x-large;
+  align-items: center;
+  font-size: large;
   color: white;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .emoji {
-  font-size: 60px;
+  font-size: 40px;
   padding: 0px;
   margin: auto;
+}
+
+.card div {
+  max-height: 100%; /* Ensure content fits within the card */
+  overflow: auto; /* Add scroll if content overflows */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
 }
