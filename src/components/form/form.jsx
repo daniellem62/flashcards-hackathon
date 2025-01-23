@@ -13,7 +13,6 @@ function Form() {
             };
         cardData.push(newFlashcard);
         event.target.reset();
-
     }
 
     return (
@@ -23,6 +22,7 @@ function Form() {
             Question:
             <input 
                 type="text"
+
                 name="question"
                 placeholder="Enter the question"
                 />
@@ -34,6 +34,10 @@ function Form() {
                 type="text"
                 name="answer"
                 placeholder="Enter the answer"
+                />
+            Answer:
+            <input 
+                type="text"
                 />
         </label>
         <button type="submit">Add flashcard</button>
