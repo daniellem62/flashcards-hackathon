@@ -1,21 +1,21 @@
 .card {
-    width: 300px;
-    height: 200px;
-    background-color: #04357e;
-    border: 20px solid #2e6fd1;
-    border-radius: 5px;
-    padding: 100px;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    margin: 20px;
-    text-align: center;
-    font-size: x-large;
-    color: white
-  }
+  width: 300px;
+  height: 200px;
+  background-color: #04357e;
+  border: 20px solid #2e6fd1;
+  border-radius: 5px;
+  padding: 50px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  margin: 20px;
+  text-align: center;
+  font-size: x-large;
+  color: white;
+}
 
-  .emoji {
-    font-size: 60px;
-    padding: 0px;
-    margin:auto;
-  }
+.emoji {
+  font-size: 60px;
+  padding: 0px;
+  margin: auto;
+}

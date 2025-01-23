@@ -1,0 +1,25 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: auto;
+}
+
+.arrowLeft,
+.arrowRight {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.images {
+  display: flex;
+  gap: 1rem;
+}
+
+.images > div {
+  flex: 1;
+}
