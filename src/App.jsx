@@ -6,7 +6,7 @@ import "./index.css";
 
 // importing components
 import Footer from "./Components/Footer/footer.jsx";
-import Header from "./components/header/header.jsx";
+import Header from "./Components/header/header.jsx";
 import Form from "./components/form/form.jsx";
 import Flashcards from "./Components/Flashcards/Flashcards.jsx";
 
@@ -18,10 +18,9 @@ function App() {
   const [cards, setCards] = useState(data);
 
   return (
-
     <div>
       <Header />
-      <Form cards={cards} setCards={setCards}/>
+      <Form cards={cards} setCards={setCards} />
       <Flashcards existingCards={cards} />
       <Footer />
     </div>
