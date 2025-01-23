@@ -8,16 +8,12 @@ function App() {
   /* const [count, setCount] = useState(0); */
 
   return (
-
     <div>
       <Header />
-     <Form />
+      <Form />
       <Flashcards />
     </div>
   );
-
-  )
-
 }
 
 export default App;
