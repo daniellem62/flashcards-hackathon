@@ -1,5 +1,6 @@
 /* import { useState } from "react"; */
 import Header from "./components/header/header.jsx";
+import Form from "./components/form/form.jsx";
 import "./index.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
   <div>
     <Header />
+    <Form />
   </div>
   )
 }
