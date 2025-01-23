@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import styles from "./Flashcard.module.css";
 import { useState } from "react";
+import { motion } from "motion/react"
 
 function Flashcard({ question, answer }) {
   // Initialise state as false, as cards will render question pre flip
@@ -13,9 +14,9 @@ function Flashcard({ question, answer }) {
   }
   // Runs the handleFlip function when clicked
   return (
-    <div className={styles.card} onClick={handleFlip}>
-      {flipped ? answer : question}
-    </div> // Ternary operator that renders either question or answer depending on state of flipped
+    <motion.div initial={{ scale: 1 }}  whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.1 }} className={styles.card} onClick={handleFlip}><p className={styles.emoji}>{"😁"}</p>
+      <div>{flipped ? answer : question}</div>
+    </motion.div> // Ternary operator that renders either question or answer depending on state of flipped
   );
 }
 

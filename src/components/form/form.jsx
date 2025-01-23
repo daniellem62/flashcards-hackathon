@@ -1,3 +1,6 @@
+import { motion } from "motion/react";
+import styles from "./form.module.css";
+
 function Form({cards, setCards}) {
 
 
@@ -17,26 +20,27 @@ function Form({cards, setCards}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-        <h3> Add a new flashcard</h3>
-        <label>
+        <form onSubmit={handleSubmit} className={styles.form}>
+        <h3 className={styles.h3}> Add a new flashcard</h3>
+        <label className={styles.label}>
             Question:
             <input 
+                className={styles.input} 
                 type="text"
                 name="question"
                 placeholder="Enter the question"
                 />
         </label>
-        <br />
-        <label>
+        <label className={styles.label}>
             Answer:
-            <input 
+            <input
+                className={styles.input} 
                 type="text"
                 name="answer"
                 placeholder="Enter the answer"
                 />
         </label>
-        <button type="submit">Add flashcard</button>
+        <motion.button initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} type="submit" className={styles.button}>Add flashcard</motion.button>
         </form>
     );
 }
