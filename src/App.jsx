@@ -21,7 +21,7 @@ function App() {
 
     <div>
       <Header />
-      <Form />
+      <Form cards={cards} setCards={setCards}/>
       <Flashcards existingCards={cards} />
       <Footer />
     </div>
