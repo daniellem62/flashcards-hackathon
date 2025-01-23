@@ -1,0 +1,38 @@
+.button {
+    background-color: #0833f1;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.label {
+    color: white;
+    font-size: 20px;
+    margin: 20px;
+    flex-direction: row;
+}
+
+.h3 {
+    color: white;
+    font-size: 30px;
+
+}
+
+.input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}   
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}

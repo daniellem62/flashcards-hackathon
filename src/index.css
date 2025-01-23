@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #9fa8da;
+  background-color: #112fd8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,16 +28,12 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #160336;
 }
 
 footer {
   position: absolute;
   bottom: 0
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
