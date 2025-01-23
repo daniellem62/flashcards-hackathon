@@ -1,17 +1,18 @@
-import { cardData } from "../../assets/data.js";
-
-function Form() {
-
+function Form({cards, setCards}) {
 
 
     function handleSubmit(event) {
-        event.preventDefault();
+        event.preventDefault(); // Stops the page from refreshing
         console.log("Form submitted");
         const newFlashcard = {
             question: event.target.question.value, 
             answer: event.target.answer.value
             };
-        cardData.push(newFlashcard);
+        // Update the parent state with the new flashcard
+        setCards([...cards, newFlashcard]);
+
+        // Log the updated cards (optional)
+        console.log("Updated cards:", [...cards, newFlashcard]);
         event.target.reset();
     }
 
@@ -22,7 +23,6 @@ function Form() {
             Question:
             <input 
                 type="text"
-
                 name="question"
                 placeholder="Enter the question"
                 />
@@ -34,10 +34,6 @@ function Form() {
                 type="text"
                 name="answer"
                 placeholder="Enter the answer"
-                />
-            Answer:
-            <input 
-                type="text"
                 />
         </label>
         <button type="submit">Add flashcard</button>
