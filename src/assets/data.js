@@ -1,14 +1,16 @@
-export const cardData = [
+const cardData = [
   {
-    Question: "Metropolitan",
-    Answer: "Circle",
+    question: "Metropolitan",
+    answer: "Circle",
   },
   {
-    Question: "District",
-    Answer: "Hammersmith & City",
+    question: "District",
+    answer: "Hammersmith & City",
   },
   {
-    Question: "District",
-    Answer: "Hammersmith & City",
+    question: "District",
+    answer: "Hammersmith & City",
   },
 ];
+
+export default cardData;

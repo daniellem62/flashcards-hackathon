@@ -1,13 +1,19 @@
-/* import data from "../../assets/data"; */
+/* eslint-disable react/prop-types */
 import Flashcard from "../Flashcard/Flashcard";
 import styles from "./Flashcards.module.css";
 
-function Flashcards() {
+function Flashcards({ existingCards }) {
   return (
     <div className={styles.cardContainer}>
-      <Flashcard />
-      <Flashcard />
-      <Flashcard />
+      {existingCards.map((card, index) => {
+        return (
+          <Flashcard
+            key={index}
+            question={card.question}
+            answer={card.answer}
+          />
+        );
+      })}
     </div>
   );
 }
