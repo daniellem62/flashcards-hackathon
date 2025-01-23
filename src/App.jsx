@@ -1,5 +1,5 @@
 /* import { useState } from "react"; */
-
+import Header from "./components/header/header.jsx";
 import "./index.css";
 import Flashcard from "./Components/Flashcard/Flashcard";
 
@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       <Flashcard />
     </div>
   );
