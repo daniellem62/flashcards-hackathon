@@ -14,7 +14,7 @@ function Flashcard({ question, answer }) {
   // Runs the handleFlip function when clicked
   return (
     <div className={styles.card} onClick={handleFlip}>
-      {flipped ? question : answer}
+      {flipped ? answer : question}
     </div> // Ternary operator that renders either question or answer depending on state of flipped
   );
 }
