@@ -30,6 +30,11 @@ body {
   min-height: 100vh;
 }
 
+footer {
+  position: absolute;
+  bottom: 0
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
