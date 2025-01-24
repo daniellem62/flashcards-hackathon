@@ -22,7 +22,7 @@ function Flashcard({ question, answer, cardIndex }) {
       onClick={handleFlip}
     >
       <p>{cardIndex}</p>
-      <p className={styles.emoji}>{"😁"}</p>
+      <p className={styles.emoji}>{flipped ? "🤓" : "🤔"}</p>
       <div>{flipped ? answer : question}</div>
     </motion.div> // Ternary operator that renders either question or answer depending on state of flipped
   );
