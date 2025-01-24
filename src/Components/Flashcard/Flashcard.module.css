@@ -32,3 +32,33 @@
   overflow: auto; /* Add scroll if content overflows */
   text-overflow: ellipsis; /* Add ellipsis for overflowing text */
 }
+
+.editButton {
+  background-color: #04357e;
+}
+
+.deleteButton {
+  background-color: #04357e;
+}
+
+.saveButton {
+  background-color: #04357e;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  height: 15px;
+  width: 200px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}

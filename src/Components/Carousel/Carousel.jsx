@@ -39,6 +39,12 @@ function Carousel({ existingCards }) {
     return shuffledArray;
   }
 
+  function handleDelete(e, {cardIndex}) {
+    e.stopPropagation(); // Prevents the card from flipping when deleting
+    existingCards.splice(cardIndex, 1);
+    console.log("Deleting card", cardIndex);
+  }
+
   return (
     <div>
       <h1>Number of flashcards: {existingCards.length}</h1>
@@ -53,6 +59,7 @@ function Carousel({ existingCards }) {
               cardIndex={currentIndex + index + 1}
               question={card.question}
               answer={card.answer}
+              onDelete={(e) => handleDelete(e, index)}
             />
           ))}
         </div>
