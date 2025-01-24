@@ -2,6 +2,7 @@ import styles from "./Flashcard.module.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+
 function Flashcard({ question, answer, cardIndex, onDelete }) {
   const [flipped, setFlipped] = useState(false);
   const [editMode, setEditMode] = useState(false);
@@ -73,12 +74,12 @@ function Flashcard({ question, answer, cardIndex, onDelete }) {
             {editMode ? "✔️" : "✏️"}
           </button>
           <button
-            type="button"
-            className={styles.deleteButton}
-            onClick={onDelete}
-          >
-            ❌
-          </button>
+  type="button"
+  className={styles.deleteButton}
+  onClick={() => onDelete(cardIndex)} // Pass the cardIndex correctly
+>
+  ❌
+</button>
           </div>
           <p>{cardIndex}</p>
           <p className={styles.emoji}>{flipped ? "🤓" : "🤔"}</p>
