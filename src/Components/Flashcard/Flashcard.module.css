@@ -1,12 +1,12 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  height: 320px;
-  background-color: #04357e;
+  width: 400px;
+  height: 400px;
+  background-color: #033a8d;
   border: 20px solid #2e6fd1;
   border-radius: 5px;
-  padding: 30px;
+  padding: 20px;
   perspective: 1000px;
   transform-style: preserve-3d;
   transition: transform 0.5s;
@@ -15,7 +15,55 @@
   padding-top: 0px;
   text-align: center;
   align-items: center;
-  font-size: large;
+  font-size: x-small;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.front {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  background-color: #033a8d;
+  border: 20px solid #2e6fd1;
+  border-radius: 5px;
+  padding: 20px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  margin: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+  text-align: center;
+  align-items: center;
+  font-size: x-small;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  background-color: #033a8d;
+  border: 20px solid #2e6fd1;
+  border-radius: 5px;
+  padding: 20px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  margin: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+  text-align: center;
+  align-items: center;
+  font-size: x-small;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
   overflow: hidden;
   word-wrap: break-word;
@@ -23,8 +71,11 @@
 
 .emoji {
   font-size: 40px;
-  padding: 0px;
-  margin: auto;
+  padding-top: 50px;
+  margin-top: 20px;
+  margin: 5px;
+  text-align: center; 
+  
 }
 
 .card div {
@@ -35,14 +86,18 @@
 
 .editButton {
   background-color: #04357e;
+  padding: 5px;
 }
 
 .deleteButton {
   background-color: #04357e;
+  padding: 5px;
 }
 
 .saveButton {
   background-color: #04357e;
+  padding: 5px;
+  margin-left: 95%;
 }
 
 .input {
@@ -61,4 +116,5 @@
   display: flex;
   flex-direction: row;
   justify-content: right;
+  margin-left: 90%;
 }

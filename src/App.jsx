@@ -23,8 +23,8 @@ function App() {
   return (
     <div>
       <Header />
-      <Carousel existingCards={cards} />
       <Form cards={cards} setCards={setCards} />
+      <Carousel existingCards={cards} />
       {/* <Flashcards existingCards={cards} /> */}
       <Footer />
     </div>

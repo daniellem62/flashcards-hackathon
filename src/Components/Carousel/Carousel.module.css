@@ -23,3 +23,22 @@
 .images > div {
   flex: 1;
 }
+
+.shuffle {
+  background-color: #21106b;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  margin-left: 45%;
+  padding:
+}
+
+.h1 {
+  color: rgb(60, 60, 61);
+  font-size: 2rem;
+  margin: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}

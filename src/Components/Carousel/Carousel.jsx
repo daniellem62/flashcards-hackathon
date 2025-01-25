@@ -32,9 +32,22 @@ function Carousel({ existingCards }) {
 
   const displayedCards = cards.slice(currentIndex, currentIndex + 3);
 
+  function shuffleArray() {
+    let shuffledArray = [...cards]; // create a copy
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    setCards(shuffledArray);
+    setCurrentIndex(0);
+  }
+
   return (
     <div>
-      <h1>Number of flashcards: {cards.length}</h1>
+      <h1 className={styles.h1}>Number of flashcards: {cards.length}</h1>
       <div className={styles.carousel}>
         <button className={styles.arrowLeft} onClick={handlePrev}>
           {"<"}
@@ -43,7 +56,7 @@ function Carousel({ existingCards }) {
           {displayedCards.map((card) => (
             <Flashcard
               key={card.id} // Use the unique ID as the key
-              cardIndex={card.id} // Pass the static ID as the index
+             // cardIndex={card.id} // Pass the static ID as the index
               question={card.question}
               answer={card.answer}
               onDelete={() => handleDelete(card.id)} // Delete based on ID
@@ -54,6 +67,9 @@ function Carousel({ existingCards }) {
           {">"}
         </button>
       </div>
+      <button className={styles.shuffle} onClick={shuffleArray}>
+        Shuffle
+      </button>
     </div>
   );
 }
