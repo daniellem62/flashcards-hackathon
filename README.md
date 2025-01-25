@@ -20,8 +20,8 @@ Version Control: Git and GitHub for collaboration and code management.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/flashcards-app.git
-cd flashcards-app
+git clone https://github.com/daniellem62/flashcards-hackathon
+cd flashcards-hackathon
 ```
 Install dependencies:
 
