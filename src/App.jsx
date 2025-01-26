@@ -1,5 +1,5 @@
 // importing state hook
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // importing default styling
 import "./index.css";
@@ -18,7 +18,15 @@ import data from "../src/assets/data.js";
 
 function App() {
   // Initialise the state with the imported data
-  const [cards, setCards] = useState(data);
+  const [cards, setCards] = useState(() => {
+    // Retrieve stored data from local storage
+    const savedCards = localStorage.getItem("flashcards");
+    return savedCards ? JSON.parse(savedCards) : data; // Use saved data or default data
+  });
+
+  useEffect(() => {
+    localStorage.setItem("flashcards", JSON.stringify(cards));
+  }, [cards]);
 
   return (
     <div>

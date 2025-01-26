@@ -26,9 +26,13 @@ function Carousel({ existingCards }) {
   };
 
   const handleDelete = (idToDelete) => {
-    setCards((prevCards) => prevCards.filter((card) => card.id !== idToDelete));
-    console.log("Deleted card with ID:", idToDelete);
+  const updatedCards = cards.filter((card) => card.id !== idToDelete);
+  setCards(updatedCards);
+  localStorage.setItem("flashcards", JSON.stringify(updatedCards));
+  console.log("Deleted card with ID:", idToDelete);
   };
+
+
 
   const displayedCards = cards.slice(currentIndex, currentIndex + 3);
 
