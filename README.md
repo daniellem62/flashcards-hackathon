@@ -20,8 +20,8 @@ Version Control: Git and GitHub for collaboration and code management.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/flashcards-app.git
-cd flashcards-app
+git clone git@github.com:daniellem62/flashcards-hackathon.git
+cd flashcards-hackathon
 ```
 Install dependencies:
 
@@ -46,8 +46,10 @@ Easy and Hard Modes: Add difficulty levels to customize the review experience.
 Filter Feature: Implement filters to sort flashcards by tags, categories, or difficulty.
 Comprehensive Testing: Add unit and integration tests for improved app reliability.
 
-📬 Contributing
+# 📬 Contributing
+
 Contributions are welcome! Feel free to fork the repo and submit a pull request with your enhancements.
 
-🏆 Acknowledgments
+# 🏆 Acknowledgments
+
 Thanks to everyone who contributed ideas, code, and feedback during this hackathon. A special shoutout to our mentors and organizers for their guidance!
