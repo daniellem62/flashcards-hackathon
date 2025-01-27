@@ -2,7 +2,7 @@ import styles from "./Flashcard.module.css";
 import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
-function Flashcard({ question, answer, cardIndex, onDelete }) {
+function Flashcard({ question, answer, cardIndex, onDelete, setCards }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [formData, setFormData] = useState({ question, answer });
@@ -21,6 +21,11 @@ function Flashcard({ question, answer, cardIndex, onDelete }) {
   function handleSave(e) {
     e.preventDefault();
     setEditMode(false); // Exit edit mode after saving
+    setCards((prevCards) =>
+      prevCards.map((card, index) =>
+        index === cardIndex ? formData : card
+      )
+    );
   }
 
   return (
@@ -61,12 +66,12 @@ function Flashcard({ question, answer, cardIndex, onDelete }) {
         {editMode ? (
           <form onSubmit={handleSave}>
             <div className={styles.formGroup}>
-            <button type="submit" className={styles.saveButton}>
-              ✔️ Save
-            </button>
-              <label>
+              <button type="submit" className={styles.saveButton}>
+                ✔️ Save
+              </button>
+              <label className={styles.label}>
                 Question:
-                <input
+                <textarea
                   type="text"
                   className={styles.input}
                   value={formData.question}
@@ -77,9 +82,9 @@ function Flashcard({ question, answer, cardIndex, onDelete }) {
               </label>
             </div>
             <div className={styles.formGroup}>
-              <label>
+              <label className={styles.label}>
                 Answer:
-                <input
+                <textarea
                   type="text"
                   className={styles.input}
                   value={formData.answer}

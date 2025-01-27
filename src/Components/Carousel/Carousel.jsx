@@ -61,6 +61,7 @@ function Carousel({ existingCards }) {
             <Flashcard
               key={card.id} // Use the unique ID as the key
              // cardIndex={card.id} // Pass the static ID as the index
+              setCards={setCards}
               question={card.question}
               answer={card.answer}
               onDelete={() => handleDelete(card.id)} // Delete based on ID
