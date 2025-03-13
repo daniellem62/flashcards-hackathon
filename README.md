@@ -7,6 +7,8 @@ Whether you're cramming for exams, learning a new language, or just looking for 
 # ✨ Features
 
 Customizable Flashcards: Create your own decks and cards tailored to your needs.
+![Alt text](images/screenshot.png)
+
 
 # 🛠️ Technologies Used
 Frontend: React for building a dynamic and user-friendly interface.
